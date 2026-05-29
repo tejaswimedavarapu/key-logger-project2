@@ -1,0 +1,34 @@
+{
+  "name": "node-keylogger",
+  "version": "1.0.0",
+  "description": "Educational keylogger - captures keystrokes, writes to secure local log, provides viewer",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "view": "node viewer.js",
+    "linux": "node -e \"const K=require('./src/index'); new K.LinuxKeyboard('event0').on('keydown',e=>console.log(e.keyId||e.keyCode))\"",
+    "compile": "babel --presets es2015 src/ -q -d lib/",
+    "prepublish": "npm run compile",
+    "test": "echo \"Run: npm start (keylogger) or npm run view (viewer)\""
+  },
+  "keywords": [
+    "keylogger",
+    "keyboard",
+    "input",
+    "linux",
+    "windows",
+    "mac",
+    "security",
+    "education",
+    "logging"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "node-global-key-listener": "^0.3.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.5.1",
+    "babel-preset-es2015": "^6.5.0"
+  }
+}
