@@ -1,0 +1,119 @@
+
+<style>
+  .terminal { background: #1e1e1e; border-radius: 8px; padding: 0; font-family: 'Courier New', monospace; font-size: 13px; margin-bottom: 24px; overflow: hidden; }
+  .terminal-bar { background: #3c3c3c; padding: 8px 16px; display: flex; align-items: center; gap: 8px; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .red { background: #ff5f57; }
+  .yellow { background: #ffbd2e; }
+  .green-dot { background: #28ca41; }
+  .terminal-title { color: #999; font-size: 12px; margin-left: 8px; }
+  .terminal-body { padding: 16px 20px; color: #d4d4d4; line-height: 1.8; }
+  .prompt { color: #4ec9b0; }
+  .cmd { color: #9cdcfe; }
+  .success { color: #4ec9b0; }
+  .warn { color: #ffbd2e; }
+  .err { color: #f48771; }
+  .dim { color: #666; }
+  .label { font-size: 13px; font-weight: 500; color: var(--color-text-secondary); margin-bottom: 8px; margin-top: 0; }
+  .section { margin-bottom: 32px; }
+</style>
+
+<div style="padding: 1rem 0;">
+
+  <div class="section">
+    <p class="label">1 — npm start (keylogger running)</p>
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green-dot"></div>
+        <span class="terminal-title">terminal — node-keylogger</span>
+      </div>
+      <div class="terminal-body">
+        <div><span class="prompt">user@pc</span>:<span class="cmd">~/keylogger-main</span>$ npm start</div>
+        <div class="dim">&gt; node-keylogger@1.0.0 start</div>
+        <div class="dim">&gt; node src/index.js</div>
+        <div>&nbsp;</div>
+        <div><span class="success">✔</span> Keylogger initialized</div>
+        <div><span class="success">✔</span> Log file created: <span class="cmd">logs/keylog_2026-05-29.txt</span></div>
+        <div><span class="success">✔</span> Listening for keystrokes... (Press Ctrl+C to stop)</div>
+        <div>&nbsp;</div>
+        <div class="dim">[08:42:11] Key: H</div>
+        <div class="dim">[08:42:11] Key: e</div>
+        <div class="dim">[08:42:11] Key: l</div>
+        <div class="dim">[08:42:11] Key: l</div>
+        <div class="dim">[08:42:11] Key: o</div>
+        <div class="dim">[08:42:12] Key: SPACE</div>
+        <div class="dim">[08:42:12] Key: W</div>
+        <div class="dim">[08:42:12] Key: o</div>
+        <div class="dim">[08:42:12] Key: r</div>
+        <div class="dim">[08:42:12] Key: l</div>
+        <div class="dim">[08:42:12] Key: d</div>
+        <div><span class="warn">⚠</span>  Educational use only. Do not distribute.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="label">2 — npm run view (log viewer output)</p>
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green-dot"></div>
+        <span class="terminal-title">terminal — viewer</span>
+      </div>
+      <div class="terminal-body">
+        <div><span class="prompt">user@pc</span>:<span class="cmd">~/keylogger-main</span>$ npm run view</div>
+        <div class="dim">&gt; node-keylogger@1.0.0 view</div>
+        <div class="dim">&gt; node viewer.js</div>
+        <div>&nbsp;</div>
+        <div><span class="success">===== Keystroke Log Viewer =====</span></div>
+        <div>File: <span class="cmd">logs/keylog_2026-05-29.txt</span></div>
+        <div>Total keystrokes: <span class="success">127</span></div>
+        <div>&nbsp;</div>
+        <div><span class="dim">[08:42:11]</span> H e l l o SPACE W o r l d</div>
+        <div><span class="dim">[08:43:05]</span> ENTER</div>
+        <div><span class="dim">[08:43:06]</span> n p m SPACE r u n SPACE v i e w</div>
+        <div><span class="dim">[08:43:09]</span> ENTER</div>
+        <div>&nbsp;</div>
+        <div><span class="success">✔</span> End of log.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="label">3 — git push (upload to GitHub)</p>
+    <div class="terminal">
+      <div class="terminal-bar">
+        <div class="dot red"></div><div class="dot yellow"></div><div class="dot green-dot"></div>
+        <span class="terminal-title">terminal — git</span>
+      </div>
+      <div class="terminal-body">
+        <div><span class="prompt">user@pc</span>:<span class="cmd">~/keylogger-main</span>$ git init</div>
+        <div class="success">Initialized empty Git repository in ~/keylogger-main/.git/</div>
+        <div>&nbsp;</div>
+        <div><span class="prompt">user@pc</span>:<span class="cmd">~/keylogger-main</span>$ git add .</div>
+        <div>&nbsp;</div>
+        <div><span class="prompt">user@pc</span>:<span class="cmd">~/keylogger-main</span>$ git status</div>
+        <div class="success">On branch main</div>
+        <div class="dim">Changes to be committed:</div>
+        <div class="success">&nbsp;&nbsp;new file: .gitignore</div>
+        <div class="success">&nbsp;&nbsp;new file: .npmignore</div>
+        <div class="success">&nbsp;&nbsp;new file: package.json</div>
+        <div class="success">&nbsp;&nbsp;new file: README.md</div>
+        <div class="success">&nbsp;&nbsp;new file: viewer.js</div>
+        <div class="success">&nbsp;&nbsp;new file: src/index.js</div>
+        <div class="success">&nbsp;&nbsp;new file: src/keycodes.js</div>
+        <div>&nbsp;</div>
+        <div><span class="prompt">user@pc</span>:<span class="cmd">~/keylogger-main</span>$ git commit -m <span class="warn">"Initial commit - Educational keylogger"</span></div>
+        <div class="success">[main (root-commit) a3f92c1] Initial commit - Educational keylogger</div>
+        <div class="dim">&nbsp;7 files changed, 312 insertions(+)</div>
+        <div>&nbsp;</div>
+        <div><span class="prompt">user@pc</span>:<span class="cmd">~/keylogger-main</span>$ git push -u origin main</div>
+        <div class="dim">Enumerating objects: 9, done.</div>
+        <div class="dim">Counting objects: 100% (9/9), done.</div>
+        <div class="dim">Writing objects: 100% (9/9), 4.21 KiB | 4.21 MiB/s, done.</div>
+        <div class="success">Branch 'main' set up to track remote branch 'main' from 'origin'.</div>
+        <div><span class="success">✔</span> Successfully pushed to GitHub!</div>
+      </div>
+    </div>
+  </div>
+
+</div>
